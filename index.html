@@ -12,44 +12,82 @@
 </head>
 <body>
     <style>
-    </style>
-      <!-- Navigation Bar -->
-      <nav id="navbar" class="navbar bg-body-territary px-3 mb-3 shadow=sm position-fixed">
-        <a class="navbar-brand fw-bold fs-3 text-primary" href="#home">SB</a>
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHome">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Second</a>
-          </li>
-        </ul>
-      </nav>
+      featurette-divider {
+        margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+      }
 
-      <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-territary p-3 rounded-2" tabindex="0">
-        <!-- Home Section -->
-        <section class="home py-5" id="scrollspyHome">
-          <div class="container-lg">
-            <div class="row min-vh-100 align-items-center align-content-center">
-              <div class="col-md-6 mt-5 mt-md-0">
-                <div class="home-img text-center">
-                  <img src="img/ex.png" width=80% height="500" class="rounded-circle mw-100" alt="profile pic">
-                </div>
+      @media (min-width: 40em) {
+        /* Bump up size of carousel content */
+        .featurette-heading {
+          font-size: 50px;
+        }
+      }
+
+      @media (min-width: 62em) {
+        .featurette-heading {
+          margin-top: 7rem;
+        }
+      }     
+    </style>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-body-secondary px-3 mb-3 shadow=sm">
+      <a class="navbar-brand fw-bold fs-3 text-primary" href="#home">SB</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHome">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspySkills">Skills</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-territary p-3 rounded-2" tabindex="0">
+    <!-- Home Section -->
+    <section class="home py-5" id="scrollspyHome">
+      <div class="container-lg">
+        <div class="row min-vh-100 align-items-center align-content-center">
+          <div class="col-md-6 mt-5 mt-md-0">
+            <div class="home-img text-center">
+              <img src="img/ex.png" width=80% height="500" class="rounded-circle mw-100" alt="profile pic">
+            </div>
+          </div>
+        <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+          <div class="home-txt">
+            <p class="text-muted mb-1">Hello, I'm</p>
+            <h1 class="text-primary text-uppercase fs-1 fs-bold">Soham Bihari</h1>
+            <p class="mt-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis a lorem eu molestie. Ut nec purus et mauris semper egestas ut vitae elit. Nullam rutrum vitae metus in sodales.</p>
+            <a href="#work" class="btn btn-primary px-3 mt-3">My Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+      <section class="portfolio">
+        <div class="container">      
+          <!-- Skills Sub Section-->
+          <hr class="featurette-divider" id="scrollspySkills">
+          <div class="row featurette">
+            <div class="col-md-12">
+              <h2 class="text-uppercase fs-bold mb-4">Skills</h2>
+              <h7>Skill 1</h7>
+              <div class="progress mt-4 mb-4" role="progressbar" aria-label="Skill 1 Bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25px">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 35%">35%</div>
               </div>
-              <div class="col-md-6 mt-5 mt-md-0 order-md-first">
-                <div class="home-txt">
-                  <p class="text-muted mb-1">Hello, I'm</p>
-                  <h1 class="text-primary text-uppercase fs-1 fs-bold">Soham Bihari</h1>
-                  <p class="mt-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis a lorem eu molestie. Ut nec purus et mauris semper egestas ut vitae elit. Nullam rutrum vitae metus in sodales.</p>
-                  <a href="#work" class="btn btn-primary px-3 mt-3">My Work</a>
-                </div>
+              <h7>Skill 2</h7>
+              <div class="progress mt-4 mb-4" role="progressbar" aria-label="Skill 2 Bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25px">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 95%">95%</div>
+              </div>
+              <h7>Skill 3</h7>
+              <div class="progress mt-4 mb-4" role="progressbar" aria-label="Skill 3 Bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25px">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 67%">67%</div>
               </div>
             </div>
           </div>
-        </section>
-        <h4 id="scrollspyHeading2">Second heading</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis a lorem eu molestie. Ut nec purus et mauris semper egestas ut vitae elit. Nullam rutrum vitae metus in sodales. Nunc lacinia ex ac mi pellentesque facilisis. Morbi aliquam ex id elit efficitur, eu ultrices odio sagittis. Nulla sollicitudin odio dolor, id feugiat felis pretium vitae. Praesent finibus laoreet maximus.</p>
-      </div>
+      
+          <hr class="featurette-divider">
+      </section>
 
     <!-- JS Links-->
     <script src='js/bootstrap.bundle.min.js'></script>
