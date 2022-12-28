@@ -16,7 +16,120 @@
         margin: 5rem 0; /* Space out the Bootstrap <hr> more */
       }
 
+      /* The timeline */
+      .main-timeline {
+        position: relative;
+      }
 
+      .main-timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: #939597;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      /* Container around content */
+      .timeline {
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        }
+
+      /* The circles on the timeline */
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -13px;
+        background-color: #939597;
+        border: 5px solid #f5df4d;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      /* Left container */
+      .left {
+        padding: 0px 40px 20px 0px;
+        left: 0;
+      }
+
+      /* Right container */
+      .right {
+        padding: 0px 0px 20px 40px;
+        left: 50%;
+      }
+
+      /* Arrows pointing right */
+      .left::before {
+        content: " ";
+        position: absolute;
+        top: 18px;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }
+
+      /* Arrows pointing left */
+      .right::before {
+        content: " ";
+        position: absolute;
+        top: 18px;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -12px;
+      }
+
+      @media screen and (max-width: 600px) {
+        /* Move timeline to left */
+        .main-timeline::after {
+          left: 31px;
+        }
+
+        /* Full-width containers */
+        .timeline {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+
+        /* Left Arrows */
+        .timeline::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        } 
+
+        /* Circles Positions */
+        .left::after,
+        .right::after {
+          left: 18px;
+        }
+
+        .left::before {
+          right: auto;
+        }   
+
+        /* All Containers behave the same */
+        .right {
+          left: 0%;
+        }
+      }
 
       @media (min-width: 40em) {
         /* Bump up size of carousel content */
