@@ -12,10 +12,44 @@
 </head>
 <body>
     <style>
-
     </style>
       <!-- Navigation Bar -->
+      <nav id="navbar" class="navbar bg-body-territary px-3 mb-3 shadow=sm position-fixed">
+        <a class="navbar-brand fw-bold fs-3 text-primary" href="#home">SB</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+          </li>
+        </ul>
+      </nav>
 
+      <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-territary p-3 rounded-2" tabindex="0">
+        <!-- Home Section -->
+        <section class="home py-5" id="scrollspyHome">
+          <div class="container-lg">
+            <div class="row min-vh-100 align-items-center align-content-center">
+              <div class="col-md-6 mt-5 mt-md-0">
+                <div class="home-img text-center">
+                  <img src="img/ex.png" width=80% height="500" class="rounded-circle mw-100" alt="profile pic">
+                </div>
+              </div>
+              <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+                <div class="home-txt">
+                  <p class="text-muted mb-1">Hello, I'm</p>
+                  <h1 class="text-primary text-uppercase fs-1 fs-bold">Soham Bihari</h1>
+                  <p class="mt-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis a lorem eu molestie. Ut nec purus et mauris semper egestas ut vitae elit. Nullam rutrum vitae metus in sodales.</p>
+                  <a href="#work" class="btn btn-primary px-3 mt-3">My Work</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis a lorem eu molestie. Ut nec purus et mauris semper egestas ut vitae elit. Nullam rutrum vitae metus in sodales. Nunc lacinia ex ac mi pellentesque facilisis. Morbi aliquam ex id elit efficitur, eu ultrices odio sagittis. Nulla sollicitudin odio dolor, id feugiat felis pretium vitae. Praesent finibus laoreet maximus.</p>
+      </div>
 
     <!-- JS Links-->
     <script src='js/bootstrap.bundle.min.js'></script>
